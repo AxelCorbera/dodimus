@@ -24,9 +24,25 @@
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<key>NSAppTransportSecurity</key>
+	<key>FDAllFilesDownloadedMessage</key>
+    <string>Todos los archivos han sido descargados</string>
 	<dict>
 	    <key>NSAllowsArbitraryLoads</key>
 	    <true/>
+	    <key>NSExceptionDomains</key>
+        <dict>
+          <key>www.dodimus.com</key>
+          <dict>
+          <key>NSIncludesSubdomains</key>
+          <true/>
+          <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+          <true/>
+          <key>NSTemporaryExceptionMinimumTLSVersion</key>
+          <string>TLSv1.1</string>
+          <key>NSAllowsArbitraryLoads</key><true/>
+          <key>FDMaximumConcurrentTasks</key>
+          <integer>5</integer>
+        </dict>
 	</dict>
 	<true/>
 	<key>UILaunchStoryboardName</key>
